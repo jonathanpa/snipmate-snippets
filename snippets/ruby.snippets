@@ -101,9 +101,58 @@ snippet $mapdo
 	end
 
 # rspec
+snippet $desc
+	describe '${1:desc_name}' do
+		${2}
+	end
+
+snippet $sub
+	subject { ${1:var} }
+
+snippet $bef
+	before { ${1} }
+
+snippet $con
+	context '${1:desc}' do
+		${2}
+	end
+	
 snippet $let
 	let(:${1:name}) { ${2} }
+
+snippet $it
+	it { should ${1:operator} ${2:expected} }
+
+snippet $it2
+	it 'should ${1:desc}' do
+		${2}
+	end
+
+snippet $itr
+	it { should respond_to(${1:attr}) }
+
+snippet $itvp
+	it { should validate_presence_of(${1:attr}) }
+
+snippet $itvn
+	it { should validate_numericality_of(${1:attr}).to_allow(${2}) }
+
+snippet $its
+	its(:${1:attr}) { should ${2:operator} ${3:expected} }
+
+# Fabricator
+
+snippet $Fab
+	Fabricator(:${1:name}, class_name: '${2:ClassName}') do
+		${3:attr1} ${4:val1}
+		${5:attr2} ${6:val2}
+	end
 
 # debugging
 snippet $pry
 	binding.pry
+
+snippet $itpry
+	it 'should test' do
+		binding.pry
+	end
