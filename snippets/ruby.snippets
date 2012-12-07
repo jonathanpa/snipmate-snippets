@@ -46,6 +46,11 @@ snippet $unless
 		${2}
 	end
 
+snippet $mod module .. end
+	module ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
+		${2}
+	end
+
 snippet $cla class .. end
 	class ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
 		${2}
@@ -63,11 +68,6 @@ snippet $cla class .. < ParentClass .. initialize .. end
 		def initialize(${3:args})
 			${4}
 		end
-	end
-
-snippet $mod module .. end
-	module ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`}
-		${2}
 	end
 
 # attr_reader
