@@ -10,6 +10,9 @@ snippet #!
 snippet $req require
 	require '${1}'
 
+snippet $reqs require 'spec_helper'
+	require 'spec_helper'
+
 snippet $case
 	case ${1:object}
 	when ${2:condition}
@@ -101,6 +104,10 @@ snippet $mapdo
 	end
 
 # rspec
+snippet $des
+	describe ${1:ClassName} do
+	${2}
+	end
 snippet $desc
 	describe '${1:desc_name}' do
 		${2}
@@ -111,6 +118,11 @@ snippet $sub
 
 snippet $bef
 	before { ${1} }
+
+snippet $befd
+	before do
+		${1}
+	end
 
 snippet $con
 	context '${1:desc}' do
@@ -147,6 +159,12 @@ snippet $Fab
 		${3:attr1} ${4:val1}
 		${5:attr2} ${6:val2}
 	end
+
+snippet $Fc
+	Fabricate(:${1:name})
+
+snippet $Fb
+	Fabricate.build(:${1:name})
 
 # debugging
 snippet $pry
