@@ -175,6 +175,9 @@ snippet $Fc
 snippet $Fb
 	Fabricate.build(:${1:name})
 
+snippet $seq
+	{ sequence(:${1:name}) { |i| ${2} } }
+
 # debugging
 snippet $pry
 	binding.pry
