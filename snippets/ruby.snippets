@@ -161,6 +161,9 @@ snippet $itvn
 snippet $item
 	it { should embed_many(${1:attr}) }
 
+snippet $ite
+	it { expect { ${1} }.to ${2} }
+
 snippet $its
 	its(:${1:attr}) { should ${2:operator} ${3:expected} }
 
