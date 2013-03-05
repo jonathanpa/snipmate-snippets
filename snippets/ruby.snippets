@@ -187,6 +187,27 @@ snippet $Fb
 snippet $seq
 	{ sequence(:${1:name}) { |i| ${2} } }
 
+
+# Factory girl
+
+snippet $FGd
+	FactoryGirl.define do
+		factory :${1:name} do
+			${2}
+		end
+	end
+
+snippet $FGf
+	factory :${1:name} do
+		${2}
+	end
+
+snippet $FGc
+	FactoryGirl.create(:${1:name})
+
+snippet $FGb
+	FactoryGirl.build(:${1:name})
+
 # debugging
 snippet $pry
 	binding.pry
